@@ -112,6 +112,9 @@ _This is the most important step in the modelling to boost the model performace_
 * find the `root mean square error`(rmse) of actual transactionRevenue and predicted transactionRevenue. 
 * check whether model is optimised or not.
 
+## Ensembling
+* I tried to ensemble `LightGBM`, `xgboost`, `catboost` but performance did not improve much(lack of time to tune paremeters of xgboost and catboost).
+
 ## Submission
 * The predicted transactionRevenue of test set will be in `np.log1p` form, so take inverse i,e apply `np.expm1`.
 * calculate total _transactionRevenue_ of each visitor.
@@ -125,20 +128,3 @@ sub_df = sub_df.groupby('fullVisitorID')['transactionRevenue'].sum().reset_index
 ```python
 sub_df.to_csv(path, index=False)
 ```
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
