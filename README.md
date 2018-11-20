@@ -129,4 +129,7 @@ sub_df = sub_df.groupby('fullVisitorID')['transactionRevenue'].sum().reset_index
 sub_df.to_csv(path, index=False)
 ```
 ## Public Leaderboard score
-_My best score on kaggle for this competition is_ ```diff root mean square error 1.7061*
+_My best score on kaggle for this competition is_
+```diff 
+root mean square error 1.7061
+```
